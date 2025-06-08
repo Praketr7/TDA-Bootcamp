@@ -1,0 +1,112 @@
+body{
+    background-color: black;
+    text-align: center;
+}
+div{
+    border: 5px solid white; /*needs all 3 attributes*/
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    background-color: #DDA853;
+    padding-left: 1rem;
+}
+.box1 h1{
+    margin: 0;
+}
+.box1 p{
+    margin-top: 0;
+}
+.box2 p{
+    padding: 1em;
+    border: 1px solid white;
+}
+.box2 h1{
+    padding: 1em;
+    border: 1px solid white;
+}
+.box3 p, .box3 h1{ /*just writing p,h1 h1 is taken as whole not only for box3*/
+    padding: 1rem;
+    border: 1px solid white;
+}
+.box3{
+    width: 25%; 
+    height: 12em; /*https://pxtoem.com.au/ can use pixels too*/ 
+}
+
+nav{
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0px solid #DDA853;
+}
+nav ul{
+    list-style-type: none; /*removes bullets*/
+    border: 0px solid #DDA853;
+}
+nav li{
+    border: 0px solid #DDA853; /*keeps adding borders to see where the space is being added */
+    /*making it 0px as we might use it later to debug*/
+}
+/*now its either padding of ul or margin*/
+nav ul{
+    padding:0;
+}
+/*needs to keep links apart and as clickable buttons*/
+nav li{
+    width: 7rem;
+    background-color: #DDA853;
+    border: 3px solid white;
+    margin-bottom: 0.2rem;
+    text-align: center;
+    display: inline-block; /*one property for horizontal nav bar*/
+}
+nav a{
+    padding: 0.1rem;
+    /*background-color: beige;*/
+    display: block; /*makes a from inline to block element so whole box is clickable*/
+    padding: 0.5rem;
+}
+nav a:link{
+    color: black;
+}
+nav a:hover{
+    background-color: white;
+}
+nav a:visited{
+    color: black;
+}
+.floatleft{
+    float: left;
+    margin: 0 1rem 0 0.5rem;/*top right bottom left like clock*/
+}
+.imgtxt{
+    color: black;
+    padding-right: 0.2rem;
+}
+article{
+    width: 25rem;
+    background-color: #DDA853;
+    border: solid 2px white;
+    margin: 0 auto; /*aligns to centre*/
+    padding-left: 0.2rem;
+}
+article:after{ /*clear formula for float to put image in box*/
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ull{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    padding-top: 1rem;
+    display: flex;
+    flex-flow: row nowrap; /*puts it all in one row, while wrap puts it in next line when not enough space*/ 
+    justify-content: space-around; /*options: flex-end, center*/
+}
+.ull li{
+    border: 2px solid white;
+    background-color: #DDA853;
+    padding:0.2rem;
+    /*flex-basis: 12%; to make same size boxes regardless of text, helps for boxes with same height as usually we dont define height*/
+}
+/*figuring out where space is coming from is imp, above heading space is from div box and below heading space is from para*/
+/*measurements: 1em is diff for diff tags like p and h1 but 1rem is same*/
