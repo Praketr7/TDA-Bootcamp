@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#9bd5ee] text-2xl font-mono max-sm:text-sm max-md:text-base;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-[#FFFECB] inline-block rounded-md border-2 border-black p-3 max-md:p-1 shadow-sm shadow-black;
+  }
+}
+
+@layer utilities{
+    .flex-centre{
+        @apply flex h-[100vh] w-[100vw] items-center justify-center border-2 border-amber-200 p-0;
+    }
+} 
