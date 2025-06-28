@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .task-item {
+    margin-bottom: 8px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray; 
+  }
+
+  .task-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-grow: 1;
+  }
+
+  .task-checkbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  .task-text {
+    color: #1f2937;
+    padding-left: 8px;
+  }
+
+  .task-delete {
+    margin-left: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .filter-item {
+    margin-bottom: 4px;
+    padding: 6px 8px;
+    border-bottom: 1px solid #d1d5db; 
+    border-radius: 4px;
+    font-size: 14px;
+    color: #374151;
+  }
+}
